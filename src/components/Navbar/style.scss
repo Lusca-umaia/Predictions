@@ -24,3 +24,29 @@ nav {
         margin: auto auto;
     }
 }
+
+@media (max-width: 470px) {
+    nav {
+        img {
+            height: 40px;
+        }
+
+        span {
+            font-size: 1.3em;
+        }
+    }
+}
+
+@media (max-width: 340px) {
+    nav {
+        height: 75px;
+
+        img {
+            display: none;
+        }
+
+        span {
+            font-size: 1.3em;
+        }
+    }
+}

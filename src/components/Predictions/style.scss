@@ -3,6 +3,13 @@
     max-width: 1800px;
     margin: 0 auto;
 
+    .cityTop {
+        color: #FFF;
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 2.2em;
+    }
+
     .Predections-group {
         display: flex;
         justify-content: space-around;
@@ -55,13 +62,19 @@
 
 @media (max-width: 700px) {
     .Predections-Container {
+        width: 100%;
+
         .Predections-group {
+            gap: 0;
             flex-direction: column;
 
             .Predections-box {
                 flex-direction: initial;
                 justify-content: space-between;
                 gap: 0;
+                border-radius: 0;
+                border-left: 0;
+                border-right: 0;
                 padding: 2px 20px;
 
                 h2 {
@@ -78,6 +91,61 @@
 
                 #description {
                     display: none;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .Predections-Container {
+        .cityTop {
+            font-size: 1.5em;
+        }
+
+        .Predections-group {
+
+            .Predections-box {
+                justify-content: space-around;
+                padding: 2px 5px;
+
+                h2 {
+                    width: 130px;
+                    padding: 10px 5px;
+                    font-size: 1em;
+                }
+
+                img {
+                    height: 90px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 370px) {
+    .Predections-Container {
+        .Predections-group {
+            .Predections-box {
+                display: grid;
+                grid-template-areas:
+                    'Day img'
+                    'temperature img'
+                ;
+
+                h2 {
+                    grid-area: Day;
+                }
+
+                article {
+                    display: flex;
+                    justify-content: center;
+                    grid-area: temperature;
+                }
+
+                img {
+
+                    grid-area: img;
                 }
             }
         }

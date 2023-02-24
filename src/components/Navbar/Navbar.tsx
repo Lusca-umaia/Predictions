@@ -1,10 +1,12 @@
 import './style.scss'
 
+import logo from '../../assets/logo.png'
+
 const Navbar: React.FC = () => {
     return (
         <nav>
             <img
-                src='https://play-lh.googleusercontent.com/ve3pM-tgzdJXYdUFu3QDPHwYo4acEtMEjJV5-BorsCDz5F9ggQPnJMv06ztGdkMDQlE'
+                src={logo}
             />
             <span>Previsões-Online</span>
         </nav>

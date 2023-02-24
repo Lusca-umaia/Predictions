@@ -10,11 +10,10 @@ const Predictions: React.FC = () => {
 
     const days = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado']
     const date = new Date()
+
     return (
         <section className="Predections-Container">
-            <h2
-                style={{ color: '#FFF', marginBottom: '20px', textAlign: 'center', fontSize: '2.2em' }}
-            >
+            <h2 className='cityTop'>
                 {predection.valuesPredections ? predection.cityComparation.toUpperCase() : ''}
             </h2>
             <div className="Predections-group">

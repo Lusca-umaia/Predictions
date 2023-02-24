@@ -68,6 +68,10 @@ const Input: React.FC = () => {
                 store.dispatch(setCityComparationAction(city))
                 generateValue(response.data[0].lat, response.data[0].lon, city)
             })
+            .catch(() => {
+                store.dispatch(setCityComparationAction('Valor Inválido'))
+                store.dispatch(setPredectionAction([]))
+            })
     }
 
     return (

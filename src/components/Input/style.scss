@@ -46,3 +46,23 @@
     border-image-slice: 1 !important;
     color: rgba(255, 221, 221, 0.5) !important;
 }
+
+@media (max-width: 370px) {
+    .GroupInput {
+        width: 300px;
+
+        input {
+            width: 250px;
+        }
+    }
+}
+
+@media (max-width: 310px) {
+    .GroupInput {
+        width: 250px;
+
+        input {
+            width: 200px;
+        }
+    }
+}
