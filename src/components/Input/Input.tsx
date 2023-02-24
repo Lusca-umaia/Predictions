@@ -63,7 +63,7 @@ const Input: React.FC = () => {
     }, [predection.valuesPredections])
 
     function generateLocation(city: string) {
-        const response = axios.get(`http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=${key}`)
+        const response = axios.get(`https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=${key}`)
             .then(response => {
                 store.dispatch(setCityComparationAction(city))
                 generateValue(response.data[0].lat, response.data[0].lon, city)

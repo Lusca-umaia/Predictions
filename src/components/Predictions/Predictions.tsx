@@ -21,7 +21,7 @@ const Predictions: React.FC = () => {
                     predection.valuesPredections.map((item, index: number) => (
                         <section className="Predections-box">
                             <h2>{days[date.getDay() + index > 6 ? date.getDay() + index - 7 : date.getDay() + index]}</h2>
-                            <img src={`http://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`} alt={item.weather[0].description} />
+                            <img src={`https://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`} alt={item.weather[0].description} />
                             <article>
                                 <h3>{item.main.temp_max.toFixed(0)}°</h3>
                                 <h3 id="min">{item.main.temp_min.toFixed(0)}°</h3>
