@@ -1,0 +1,26 @@
+nav {
+    border: 5px solid #FFF;
+    position: relative;
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+
+    img {
+        height: 50px;
+    }
+
+    span {
+        color: #FFF;
+        position: absolute;
+        left: 0px;
+        font-weight: 700;
+        font-size: 2em;
+        width: 100%;
+        text-align: center;
+        right: 0px;
+        margin: auto auto;
+    }
+}

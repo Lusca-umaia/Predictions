@@ -1,0 +1,48 @@
+.GroupInput {
+    display: flex;
+    align-items: center;
+    width: 350px;
+    border-image: linear-gradient(to right, white, white) !important;
+    border-image-slice: 1 !important;
+    padding: 5px;
+    margin: 30px auto;
+    border-radius: 5px;
+    gap: 10px;
+    transition: .6s all;
+    background-color: #FFF;
+    border: 4px solid grey;
+    background-image: url('https://i.pinimg.com/736x/d2/0a/72/d20a726673f8d4cf81ea09926dba53c9.jpg');
+
+    input {
+        width: 300px;
+        color: #FFF;
+        border: none;
+        font-weight: 700;
+        font-size: 1em;
+        outline: none;
+        background-color: transparent;
+        height: 30px;
+    }
+
+    button {
+        cursor: pointer;
+        border: none;
+        background-color: transparent;
+        transition: .6s all;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+
+        img {
+            height: 25px;
+        }
+    }
+}
+
+.borderInput {
+    border: 4px solid transparent !important;
+    border-image: linear-gradient(to right, #b0e0e6, #191970) !important;
+    border-image-slice: 1 !important;
+    color: rgba(255, 221, 221, 0.5) !important;
+}
