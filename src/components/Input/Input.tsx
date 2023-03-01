@@ -6,8 +6,7 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useSelector } from 'react-redux'
 
-import { setAllPredections, setCityComparationAction, setPredectionAction } from '../../store/Predictions/actions'
-import { setCityAction } from "../../store/Predictions/actions"
+import { setAllPredections, setCityComparationAction, setPredectionAction, setResponseData, setCityAction } from '../../store/Predictions/actions'
 
 import search from '../../assets/search.png'
 
@@ -37,11 +36,13 @@ const Input: React.FC = () => {
         else {
             const response = axios.get(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&lang=pt_br&appid=${key}`)
                 .then(response => {
+
+                    store.dispatch(setResponseData(response.data))
+
                     let values: Array<IPredection> = []
                     for (let i = 0; i < 40; i += 8) {
                         values.push(response.data.list[i])
                     }
-
                     store.dispatch(setPredectionAction(values))
                 })
         }

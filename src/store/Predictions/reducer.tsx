@@ -4,7 +4,9 @@ const PREDICTIONS_INITIAL_VALUES = {
     valuesPredections: null,
     city: '',
     cityComparation: '',
-    predectionsAll: []
+    predectionsAll: [],
+    reponseData: [],
+    weatherForecasts: []
 }
 
 export default function predectionsReducer(state = PREDICTIONS_INITIAL_VALUES, action: IActions) {
@@ -30,6 +32,17 @@ export default function predectionsReducer(state = PREDICTIONS_INITIAL_VALUES, a
             return {
                 ...state,
                 predectionsAll: action.payload
+            }
+        case "VALUE_RESPONSE_DATA":
+            return {
+                ...state,
+                reponseData: action.payload
+            }
+
+        case "VALUE_WEATHER_FORECASTS":
+            return {
+                ...state,
+                weatherForecasts: action.payload
             }
 
         default:
