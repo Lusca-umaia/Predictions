@@ -6,7 +6,11 @@
     background-color: #ffffff3a;
     position: absolute;
     backdrop-filter: blur(2px);
-    transition: .7s;
+    transition: 2.7s;
+}
+
+.heightEffect {
+    height: 350px !important;
 }
 
 .container_modal {
@@ -15,6 +19,7 @@
     position: absolute;
     align-items: center;
     color: #FFF;
+    height: 0px;
     overflow: hidden;
     bottom: 0;
     left: 0;
@@ -97,4 +102,16 @@
         }
     }
 
+}
+
+@media (max-width: 820px) {
+    .heightEffect {
+        height: 500px !important;
+    }
+}
+
+@media (max-width: 500px) {
+    .heightEffect {
+        height: 100% !important;
+    }
 }

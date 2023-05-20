@@ -27,10 +27,9 @@ const Modal: React.FC<IProps> = ({ visible, effect }) => {
                 style={{ opacity: `${effect ? '1' : '0'}`, zIndex: `${effect ? '' : '-1'}` }}
                 className='effectModal'
                 onClick={visible} />
-            <div className='container_modal'
+            <div className={`container_modal ${effect ? 'heightEffect' : ''}`}
                 style={
                     {
-                        height: `${effect ? 'auto' : '0'}`,
                         borderTop: `${effect ? '8px solid #FFF' : ''}`,
                         padding: `${effect ? '30px 20px' : ''}`,
                     }
@@ -55,8 +54,8 @@ const Modal: React.FC<IProps> = ({ visible, effect }) => {
                         </div>
                         <hr className='line' />
                         <div className='group_modal'>
-                            {predection.weatherForecasts.map((item: any, index: number) => (
-                                <section>
+                            {predection.weatherForecasts.map((item, index: number) => (
+                                < section key={item.dt}>
                                     <div className='box_modal'>
                                         <h2>{setHor(item.dt_txt)}</h2>
                                         <img src={`https://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`} alt={item.weather[0].description} />

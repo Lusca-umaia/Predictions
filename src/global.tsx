@@ -10,13 +10,14 @@ export interface IState {
         cityComparation: string
         predectionsAll: [string, IPredection[]][],
         reponseData: IResponse,
-        weatherForecasts: any
+        weatherForecasts: IPredection[]
     }
 }
 
 export interface IPredection {
     dt_txt: string
-    main: { temp_max: number, temp_min: number }
+    dt: number
+    main: { temp_max: number, temp_min: number, temp: number }
     weather: Array<{ icon: string, description: string }>
 }
 

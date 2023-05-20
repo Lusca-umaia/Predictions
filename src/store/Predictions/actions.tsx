@@ -34,7 +34,7 @@ export function setResponseData(responseData: IResponse) {
         payload: responseData
     }
 }
-export function setWeatherForecasts(weatherForecasts: any) {
+export function setWeatherForecasts(weatherForecasts: IPredection[]) {
     return {
         type: 'VALUE_WEATHER_FORECASTS',
         payload: weatherForecasts

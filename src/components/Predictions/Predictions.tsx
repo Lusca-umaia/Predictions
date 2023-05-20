@@ -37,7 +37,14 @@ const Predictions: React.FC = () => {
             <div className="Predections-group">
                 {predection.valuesPredections &&
                     predection.valuesPredections.map((item, index: number) => (
-                        <section className="Predections-box" onClick={() => { setValuesPredenctionsDay(item.dt_txt.split(' ')); setModal(true) }}>
+                        <section
+                            className="Predections-box"
+                            onClick={() => {
+                                setValuesPredenctionsDay(item.dt_txt.split(' '));
+                                setModal(true)
+                            }}
+                            key={index}
+                        >
                             <h2>{days[date.getDay() + index > 6 ? date.getDay() + index - 7 : date.getDay() + index]}</h2>
                             <img src={`https://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`} alt={item.weather[0].description} />
                             <article>
